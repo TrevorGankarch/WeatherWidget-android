@@ -14,11 +14,12 @@ import org.cerion.weatherwidget.Forecast.Daily;
 
 import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Locale;
 
 public class ForecastListAdapter extends ArrayAdapter<Daily.Entry> {
 
-    private static final SimpleDateFormat mDayFormat = new SimpleDateFormat("EEE");
-    private static final SimpleDateFormat mDateFormat = new SimpleDateFormat("d MMM");
+    private static final SimpleDateFormat mDayFormat = new SimpleDateFormat("EEE", Locale.US);
+    private static final SimpleDateFormat mDateFormat = new SimpleDateFormat("d MMM", Locale.US);
 
     public ForecastListAdapter(Context context) {
         super(context, R.layout.forecast_item);

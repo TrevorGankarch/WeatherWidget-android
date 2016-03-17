@@ -134,7 +134,7 @@ public class WeatherAppWidget extends AppWidgetProvider {
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.weather_app_widget);
 
         LocationDetails locationDetails = LocationDetailsService.mLastResult;
-        if(locationDetails != null) {
+        if(locationDetails != null && locationDetails.forecast.current != null) {
             //views.setTextViewText(R.id.temperature, Formats.mTemperatureFormat.format(locationDetails.forecast.current.temperature) + "°");
             views.setTextViewText(R.id.temperature, locationDetails.forecast.current.getTemperature());
             views.setTextViewText(R.id.weather_text, locationDetails.forecast.current.summary);

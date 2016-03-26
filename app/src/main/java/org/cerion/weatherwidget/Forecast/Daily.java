@@ -77,7 +77,7 @@ public class Daily {
         }
     }
 
-    protected Daily(JSONObject daily) throws JSONException {
+    Daily(JSONObject daily) throws JSONException {
 
         //date = new Date();
         //date.setTime(1000 * daily.getLong("time"));

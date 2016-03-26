@@ -4,7 +4,6 @@ import java.text.DecimalFormat;
 
 class Formats {
 
-    protected static final DecimalFormat mTemperatureFormat = new DecimalFormat("00.0°");
-
+    static final DecimalFormat mTemperatureFormat = new DecimalFormat("00.0°");
 
 }

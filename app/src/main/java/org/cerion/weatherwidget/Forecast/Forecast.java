@@ -9,7 +9,7 @@ public class Forecast {
     public Daily daily;
 
 
-    protected Forecast(JSONObject forecast) throws JSONException {
+    Forecast(JSONObject forecast) throws JSONException {
 
         current = new Current(forecast.getJSONObject("currently"));
         daily = new Daily(forecast.getJSONObject("daily"));

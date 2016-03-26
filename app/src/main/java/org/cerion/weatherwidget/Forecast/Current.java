@@ -31,7 +31,7 @@ public class Current {
     public Icon icon;
     private double temperature;
 
-    protected Current(JSONObject currently) throws JSONException {
+    Current(JSONObject currently) throws JSONException {
 
         //time = new Date();
         //time.setTime(1000 * currently.getLong("time"));

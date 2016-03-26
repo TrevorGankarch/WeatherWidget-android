@@ -57,7 +57,6 @@ public class WeatherAppWidget extends AppWidgetProvider {
             LocationDetailsService.start(context, location);
         }
         else {
-            //TODO, request location
             // update display to indicate there is no location
             updateDisplay(context, appWidgetId);
         }
@@ -151,50 +150,6 @@ public class WeatherAppWidget extends AppWidgetProvider {
         AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
         appWidgetManager.updateAppWidget(widgetId, views);
     }
-
-    /**
-     * Uses last known location to update widget, makes net request for info such as city/weather/etc
-     */
-    /*
-    public static class UpdateWidgetService extends IntentService {
-
-        public UpdateWidgetService() {
-            super("name");
-        }
-
-        @Override
-        protected void onHandleIntent(Intent intent) {
-
-            Log.d(TAG,"onHandleIntent action=" + intent.getAction());
-
-            int widgetId = intent.getIntExtra(EXTRA_APPWIDGET_ID, -1);
-            //Location location = (Location)intent.getExtras().get(LocationManager.KEY_LOCATION_CHANGED);
-            Location location = GPS.getLastLocation(this);
-
-            if (widgetId != -1)
-                processUpdate(widgetId,location);
-            else
-                Log.e(TAG,"missing id");
-
-        }
-
-        private void processUpdate(int widgetId, Location location) {
-
-            mLastUpdate = new Date(); //last updateDisplay
-
-            LocationDetails locationDetails = null;
-            if(location != null)
-                locationDetails = new LocationDetails(this,location);
-
-            updateDisplay(this, widgetId, locationDetails);
-
-
-        }
-
-    }
-    */
-
-
 
 
 }

@@ -16,7 +16,7 @@ import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.Locale;
 
-public class ForecastListAdapter extends ArrayAdapter<Daily.Entry> {
+class ForecastListAdapter extends ArrayAdapter<Daily.Entry> {
 
     private static final SimpleDateFormat mDayFormat = new SimpleDateFormat("EEE", Locale.US);
     private static final SimpleDateFormat mDateFormat = new SimpleDateFormat("d MMM", Locale.US);
